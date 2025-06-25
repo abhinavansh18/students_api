@@ -18,7 +18,7 @@ func main() {
 	})
 	//setup server
 	server := http.Server{
-		Addr:    cfg.Addr,
+		Addr:    cfg.HTTPServer.Addr,
 		Handler: router,
 	}
 	fmt.Println("Server Started")
