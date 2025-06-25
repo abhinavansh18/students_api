@@ -17,11 +17,11 @@ func main() {
 		w.Write([]byte("Welcome to students api"))
 	})
 	//setup server
-	server = http.Server{
+	server := http.Server{
 		Addr:    cfg.Addr,
 		Handler: router,
 	}
-	err := server.ListenandServe()
+	err := server.ListenAndServe()
 	if err != nil {
 		log.Fatal("FAiled to start server")
 	}
