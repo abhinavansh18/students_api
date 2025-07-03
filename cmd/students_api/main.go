@@ -19,7 +19,7 @@ func main() {
 	cfg := config.MustLoad()
 	//load router
 	router := http.NewServeMux()
-	router.HandleFunc("POST/api/students", student.New())
+	router.HandleFunc("/api/students", student.New())
 
 	//setup server
 	server := http.Server{
